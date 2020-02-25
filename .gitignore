@@ -1,4 +1,8 @@
 #java
+<<<<<<< HEAD
+=======
+jdk-8u141-linux-x64.tar.gz
+>>>>>>> b2c0cf39a93dfdca0aba8e2009a37b2c5d4478a8
 jdk1.8.0_141/
 jdk1.8.0_141*
 
@@ -135,4 +139,8 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
+<<<<<<< HEAD
 .pyre/
+=======
+.pyre/
+>>>>>>> b2c0cf39a93dfdca0aba8e2009a37b2c5d4478a8
