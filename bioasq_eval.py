@@ -2,12 +2,11 @@ import os
 import subprocess
 import json
 
-path_home = '/home/jovyan/Evaluation-Measures/'
-path_golden = path_home+'/golden_docs/'
-os.environ["PATH"] += os.pathsep + path_home + "jdk1.8.0_141/bin"
-os.environ["CLASSPATH"] = path_home+ "flat/BioASQEvaluation/dist/BioASQEvaluation.jar"
-
-def get_scores_phaseA(golden_file, test_json):
+def get_scores_phaseA(golden_file, test_json, path_home='/home/jovyan/Evaluation-Measures/'):
+    path_golden = path_home+'/golden_docs/'
+    os.environ["PATH"] += os.pathsep + path_home + "jdk1.8.0_141/bin"
+    os.environ["CLASSPATH"] = path_home+ "flat/BioASQEvaluation/dist/BioASQEvaluation.jar"
+    
     out_file_name = path_home+'working_folder/test_'+golden_file
     json.dump(test_json, open(out_file_name, 'w'))
     process = subprocess.Popen(['java', 'evaluation.EvaluatorTask1b', '-phaseA', '-e', '5', 
